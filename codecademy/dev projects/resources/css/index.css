@@ -11,20 +11,21 @@ p {
     font-family: "Helvetica", sans-serif;
 }
 
-.header {
-    background-image: url(../images/pattern.jpeg);
-    background-color: burlywood;
+/* .header {
     margin: 50px 10px;
-}
+} */
 
 h1 {
+    background-image: url(../images/pattern.jpeg);
+    background-color: burlywood;
+    text-align: center;
     font-size: 100px;
     font-weight: bold;
     color: khaki;
-    text-align: center;
+    margin: 50px 10px;
 }
 
-h2 {
+.item h2 {
     font-size: 32px;
     font-weight: bold;
     color: white;
@@ -32,30 +33,31 @@ h2 {
 
 h3 {
     font-weight: bold;
+    margin: 10px auto;
 }
 
-.brushes {
-    background-color: mediumspringgreen;
-    margin-bottom: 25px;
-}
-
-.frames {
-    background-color: lightcoral;
-    margin-bottom: 25px;
-}
-
-.paint {
-    background-color: skyblue;
-    margin-bottom: 25px;
-}
-
-.container {
+.item {
     margin: auto 10px;
 }
 
 .price {
     font-weight: bold;
     color: blue;
+}
+
+#brush {
+    background-color: mediumspringgreen;
+    margin-bottom: 25px;
+}
+
+#frame {
+    background-color: lightcoral;
+    margin-bottom: 25px;
+}
+
+#paint {
+    background-color: skyblue;
+    margin-bottom: 25px;
 }
 
 .description {
