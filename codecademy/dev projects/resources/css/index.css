@@ -4,13 +4,20 @@
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+p {
+    font-family: "Helvetica", sans-serif;
+}
+
 .header {
     background-image: url(../images/pattern.jpeg);
+    background-color: burlywood;
     margin: 50px 10px;
 }
 
 h1 {
-    font-family: Helvetica;
     font-size: 100px;
     font-weight: bold;
     color: khaki;
@@ -18,14 +25,12 @@ h1 {
 }
 
 h2 {
-    font-family: Helvetica;
     font-size: 32px;
     font-weight: bold;
     color: white;
 }
 
 h3 {
-    font-family: Helvetica;
     font-weight: bold;
 }
 
@@ -49,7 +54,6 @@ h3 {
 }
 
 .price {
-    font-family: Helvetica;
     font-weight: bold;
     color: blue;
 }
