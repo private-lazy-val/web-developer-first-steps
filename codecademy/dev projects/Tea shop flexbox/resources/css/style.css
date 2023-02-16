@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+html {
+    font-size: 16px;
+}
+
+body,
+header,
+footer {
+    font-size: 1.375rem;
+    font-family: 'Helvetica', sans-serif;
+    color: seashell;
+    font-weight: bold;
+}
+
+.main {
+    opacity: 0.8;
+    padding-top: 4.3125rem;
+}
+
+@media only screen and (max-width: 555px) {
+    .main {
+        padding-top: 4rem;
+    }
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 0.625rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid seashell;
+    height: 4.3125rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: seashell;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.logo {
+    cursor: pointer;
+    height: 3.125rem;
+    width: auto;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding-left: 1.25rem;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #FF8C00;
+}
+
+@media only screen and (max-width: 555px) {
+    .logo {
+        display: none;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    .nav_links li {
+        font-size: 1.25rem;
+        padding: 0 0.625rem;
+    }
+
+    header {
+        height: 4rem;
+    }
+}
+
+/* Mission section */
+#mission_container {
+    display: flex;
+    align-items: center;
+    background-image: url(../images/img-mission-background.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 43.75rem;
+    margin: 0 2.5rem;
+}
+
+.mission_text {
+    text-align: center;
+    width: 100%;
+    padding: 0.625rem 0;
+}
+
+.mission_text h2 {
+    padding-bottom: 0.3125rem;
+}
+
+@media only screen and (max-width: 555px) {
+    .logo {
+        display: none;
+    }
+
+    .mission_text h2 {
+        font-size: 1.25rem;
+    }
+
+    .mission_text h4 {
+        font-size: 1.125rem;
+    }
+
+    #mission_container {
+        margin: 0 1rem;
+    }
+}
+
+/* Tea of the month section */
+#tea_of_the_month_container {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 3.125rem 2.5rem 0;
+}
+
+.tea_of_the_month_text {
+    text-align: center;
+    line-height: 3.125rem;
+}
+
+.tea_of_the_month_img_container {
+    margin: auto;
+    padding-top: 0.625rem;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 62.5rem;
+    justify-content: center;
+    gap: 1.5625rem;
+}
+
+.tea_of_the_month_img img {
+    width: 18.75rem;
+    height: 12.5rem;
+    padding-bottom: 0.625rem;
+}
+
+.tea_of_the_month_img h4 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 555px) {
+    #tea_of_the_month_container {
+        margin: 1.25rem 1rem 0;
+
+    }
+
+    .tea_of_the_month_text h2 {
+        font-size: 1.25rem;
+    }
+
+    .tea_of_the_month_text h4 {
+        font-size: 1.125rem;
+    }
+
+    .tea_of_the_month_img h4 {
+        font-size: 1.125rem;
+    }
+}
+
+/* Locations section */
+#locations_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/img-locations-background.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 3.125rem 2.5rem 0;
+    height: 31.25rem;
+}
+
+#locations_container h2 {
+    background-color: transparent;
+    padding-bottom: 0.9375rem;
+}
+
+.addresses_container {
+    display: flex;
+    justify-content: center;
+    max-height: 18.75rem;
+    max-width: 90%;
+    gap: 2.5rem;
+    background-color: transparent;
+}
+
+.address_box {
+    width: 18.75rem;
+    line-height: 3.125rem;
+    text-align: center;
+    padding: 0.375rem;
+    font-size: 1.25rem;
+}
+
+.address_box h4 {
+    font-weight: normal;
+}
+
+.tooltipText {
+    visibility: hidden;
+    background-color: seashell;
+    color: black;
+    position: absolute;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.625rem 0.5rem;
+    line-height: 1.25rem;
+    border-radius: .3rem;
+    opacity: 0;
+    transition: 50ms transform;
+    transform: translateX(7.5rem) translateY(-4.375rem);
+}
+
+@media only screen and (max-width: 855px) {
+
+    #locations_container {
+        margin-top: 1.875rem;
+    }
+
+    .address_box h4 {
+        display: none;
+    }
+
+    .addresses_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .address_box {
+        width: auto;
+        padding: 0 2.5rem;
+    }
+
+    .address_box h3 {
+        font-weight: normal;
+    }
+
+    .tooltip {
+        cursor: pointer;
+    }
+
+    .tooltip:hover .tooltipText {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .tooltipText::after {
+        content: '';
+        border: 0.625rem solid transparent;
+        border-right-color: seashell;
+        left: -1.25rem;
+        bottom: 1.75rem;
+        position: absolute;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+
+    .tooltipText {
+        font-size: 0.875rem;
+        transform: translateX(-0.3125rem) translateY(-8.75rem);
+    }
+
+    .tooltipText:after {
+        content: '';
+        border: 0.625rem solid transparent;
+        border-top-color: seashell;
+        left: 1.25rem;
+        bottom: -1.1875rem;
+        position: absolute;
+    }
+}
+
+@media only screen and (max-width: 555px) {
+    #locations_container {
+        margin: 3.125rem 1rem 0;
+    }
+
+    #locations_container h2 {
+        font-size: 1.25rem;
+    }
+
+    .address_box h3 {
+        font-size: 1.125rem;
+    }
+}
+
+/* Footer */
+footer {
+    opacity: 0.8;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 12.5rem;
+}
+
+#copyright {
+    margin-left: 1.25rem;
+    margin-bottom: 1.5625rem;
+}
+
+@media only screen and (max-width: 555px) {
+    .footer {
+        height: 7rem;
+    }
+
+    .footer h2 {
+        font-size: 1.25rem;
+    }
+
+    .footer h5 {
+        font-size: 1.125rem;
+        font-weight: normal;
+    }
+
+    #copyright {
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: normal;
+        margin-left: 0;
+    }
+}
